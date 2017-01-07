@@ -1,0 +1,1 @@
+ID: 1 Nume: Roman Prenume: Ana Varsta: 2 Adresa_Strada: Soare Nr. 9 PrenumeM: Maria PrenumeT: Sabin

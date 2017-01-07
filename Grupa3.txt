@@ -1,0 +1,3 @@
+ID: 1 Nume: Masina Prenume: Sandra Varsta: 6 Adresa_Strada: Marcu Nr. 63 PrenumeM: Maria PrenumeT: Alex
+ID: 2 Nume: Mardare Prenume: Anca Varsta: 6 Adresa_Strada: Anastasia Nr. 60 PrenumeM: Irina PrenumeT: Andrei
+ID: 3 Nume: gigi Prenume: gigi Varsta: 4 Adresa_Strada: unu Nr. 7 PrenumeM: a PrenumeT: b
