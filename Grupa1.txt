@@ -1,0 +1,3 @@
+ID: 1 Nume: Nastrure Prenume: Magda Varsta: 0 Adresa_Strada: Margale Nr. 8 PrenumeM: Sofia PrenumeT: Radu
+ID: 2 Nume: Sanda Prenume: Andreea Varsta: 1 Adresa_Strada: Peste Nr. 98 PrenumeM: Ana PrenumeT: Anton
+ID: 3 Nume: Ciutacu Prenume: Sandra-Carmen Varsta: 1 Adresa_Strada: Sal Nr. 90 PrenumeM: Andruta PrenumeT: Mihai
