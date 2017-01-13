@@ -154,7 +154,6 @@ void adaugareCopil() {
 		cout << "Copilul nu se incadreaza in nici o grupa." << endl;
 	}
 }
-
 void meniuEditare(copil d[25], int r, string numeFisier) {
 	int s, i, valid3;
 	bool gasit = false;
@@ -227,7 +226,6 @@ void meniuEditare(copil d[25], int r, string numeFisier) {
 		cout << "ID incorect (copilul nu se gaseste in aceasta grupa)!" << endl;
 	}
 }
-
 string listareCopii() {
 	int s;
 	string numeFisier;
@@ -252,7 +250,6 @@ string listareCopii() {
 	}
 	return numeFisier;
 }
-
 void cautaSiModifica() {
 	int i, r = 0;
 	copil d[25] = { NULL };
@@ -300,4 +297,53 @@ void stergereInregistrare() {
 		if (d[k].Id == s) continue;
 		scriereInFisier(d[k], numeFisier);
 	}
+}
+bool cautaCopil(copil d[25], string numeFisier, char s[100]) {
+	char r[100];
+	bool gasit = false;
+	for (int j = 0; j < 25; j++) {
+		if (d[j].Id == 0) break;
+		int semn = strcmp(d[j].nume, s);
+		if (semn == 0) {
+			cout << "ID: " << d[j].Id << " " << "Nume: " << d[j].nume << " " << "Prenume: " << d[j].prenume << " " << "Varsta: " << d[j].varsta << " " << "Adresa: Strada: " << d[j].b.strada << " " << "Nr. " << d[j].b.nr << " " << "Prenume mama: " << d[j].prenume_mama << " " << "Prenume tata: " << d[j].prenume_tata << endl;
+			gasit = true;
+		}
+	}
+	return gasit;
+}
+void cautareDupaNume() {
+	string numeFisier;
+	bool gasit1, gasit2, gasit3 = false;
+	char s[100];
+	copil d[25] = { NULL };
+	copil e[25] = { NULL };
+	copil f[25] = { NULL };
+	cout << "Care este numele copilului pe care il cautati?" << endl;
+	cin >> s;
+	populeazaVector(d, "Grupa1.txt");
+	gasit1 = cautaCopil(d, "Grupa1.txt", s);
+	populeazaVector(e, "Grupa2.txt");
+	gasit2 = cautaCopil(e, "Grupa2.txt", s);
+	populeazaVector(f, "Grupa3.txt");
+	gasit3 = cautaCopil(f, "Grupa3.txt", s);
+	if ((gasit1 == false) && (gasit2 == false) && (gasit3 == false)) cout << "Nu este nici un copil cu acest nume. " << endl;
+}
+int main() {
+	char nrFunction = showMenu();
+	while (nrFunction != 0) {
+		std::system("cls");
+		switch (nrFunction) {
+		case '1': adaugareCopil(); break;
+		case '2': cautaSiModifica(); break;
+		case '3': listareCopii(); break;
+		case '4': stergereInregistrare(); break;
+		case '5': cautareDupaNume(); break;
+		case '0': exit(EXIT_SUCCESS); break;
+		default: cout << "EROARE " << endl;
+			break;
+		}
+		nrFunction = showMenu();
+	}
+	system("pause");
+	return 0;
 }
